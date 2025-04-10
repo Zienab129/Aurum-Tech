@@ -1,0 +1,673 @@
+{
+  "header": {
+    "contactUs": "Contact us",
+    "ourWork": "Our Work",
+    "aboutUs": "About Us",
+    "packages": "Packages",
+    "vision": "Vision"
+  },
+  "footer": {
+    "offices": "Our offices",
+    "middleEast": "Middle East",
+    "middleEastRegions": "Serving UAE, Saudi Arabia, Egypt, Kuwait, Qatar, and across the Middle East and North Africa.",
+    "europe": "Europe",
+    "europeRegions": "Serving Denmark, Germany, UK, France, and other European nations.",
+    "worldwide": "Worldwide",
+    "worldwideRegions": "Digital services available globally. Remote collaboration across all time zones.",
+    "followUs": "Follow us",
+    "quickLinksHeading": "Quick Links",
+    "supportHeading": "Support",
+    "connectHeading": "Connect With Us",
+    "connectText": "Stay connected with us to get the latest offers, services, and digital tips.",
+    "whatsappButton": "Chat on WhatsApp",
+    "copyright": "Aurum Tech. All rights reserved.",
+    "quickLinks": {
+      "company": "Company",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "supportLinks": {
+      "support": "Support",
+      "faqs": "FAQs",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "technical": "Technical Support",
+      "emails": "Our Emails"
+    }
+  },
+  "language": {
+    "switchToArabic": "العربية",
+    "switchToEnglish": "English"
+  },
+  "contactSection": {
+    "title": "Tell us about your project",
+    "offices": "Our offices"
+  },
+  "packages": {
+    "pageIntro": {
+      "eyebrow": "Website Packages",
+      "title": "Special Offer",
+      "description": "Create your dream website today with our exclusive offers! We've got three incredible packages to choose from, each designed to meet your specific needs, now at unbeatable prices!"
+    },
+    "plans": {
+      "starter": {
+        "name": "Starter Plan"
+      },
+      "professional": {
+        "name": "Professional Plan"
+      },
+      "premium": {
+        "name": "Premium Plan"
+      },
+      "details": "Contract and details will be sent through our sales team."
+    },
+    "getStarted": "Get started with the",
+    "contactViaWhatsApp": "Contact via WhatsApp",
+    "readyToStart": "Ready to get started?",
+    "contactInfo": "For more information or inquiries, contact us directly on WhatsApp at +966550959456.",
+    "contactUs": "Contact us"
+  },
+  "support": {
+    "pageIntro": {
+      "eyebrow": "Support",
+      "title": "Technical Support",
+      "description": "Our technical team is ready to support you 24/7. Whether you're experiencing a bug, need help with your website, or have a feature request, we're here to help."
+    },
+    "cards": {
+      "whatsapp": {
+        "title": "WhatsApp Support",
+        "description": "Get instant support via WhatsApp for urgent issues and quick troubleshooting.",
+        "actionText": "Chat with us"
+      },
+      "email": {
+        "title": "Email Support",
+        "description": "Send us an email for detailed technical issues or questions about your services.",
+        "actionText": "Email support team"
+      }
+    },
+    "requestForm": {
+      "title": "Submit a Support Request",
+      "description": "Fill out the form below with details about your technical issue, and our support team will get back to you within 24 hours."
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "whatsapp": "WhatsApp Number",
+      "subject": "Subject",
+      "message": "Message",
+      "submitButton": "Submit Support Request",
+      "submittingButton": "Sending...",
+      "successTitle": "Message Sent!",
+      "successMessage": "Thank you for reaching out. We'll get back to you as soon as possible.",
+      "sendAnother": "Send Another Message",
+      "validation": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Please enter a valid email address",
+        "phoneRequired": "Please enter a valid phone number",
+        "subjectRequired": "Subject is required",
+        "messageRequired": "Message is required"
+      }
+    }
+  },
+  "shapingFuture": {
+    "heading": "Shaping the Future with Innovative Tech Solutions",
+    "subheading": "Discover how our cutting-edge technologies can transform your business and drive sustainable growth in the digital age.",
+    "cta": "Start Your Journey",
+    "solutions": {
+      "ai": {
+        "title": "AI-Powered Solutions",
+        "description": "Enhance your business with our cutting-edge artificial intelligence tools that adapt to your needs.",
+        "details": "Our AI solutions help businesses automate processes, gain insights from data, and deliver personalized experiences to customers."
+      },
+      "webDesign": {
+        "title": "Responsive Web Design",
+        "description": "Create stunning websites that work flawlessly across all devices and screen sizes.",
+        "details": "Our responsive design approach ensures your website delivers an optimal experience on desktops, tablets, and mobile devices."
+      },
+      "security": {
+        "title": "Cyber Security",
+        "description": "Protect your digital assets with our comprehensive security solutions and threat monitoring.",
+        "details": "We implement advanced security measures to safeguard your data, applications, and infrastructure from evolving cyber threats."
+      },
+      "cloud": {
+        "title": "Cloud Computing",
+        "description": "Scale your business efficiently with our reliable cloud infrastructure and solutions.",
+        "details": "Our cloud services provide flexibility, scalability, and cost-efficiency, enabling your business to grow without infrastructure limitations."
+      },
+      "global": {
+        "title": "Global Reach",
+        "description": "Expand your digital presence to new markets with localized solutions and strategies.",
+        "details": "We help businesses reach international audiences with multilingual websites, localized content, and global digital marketing strategies."
+      },
+      "analytics": {
+        "title": "Performance Analytics",
+        "description": "Gain valuable insights from data to make informed decisions and optimize your digital strategy.",
+        "details": "Our analytics tools provide comprehensive data visualization and insights to help you track performance and drive business growth."
+      }
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Elevate Your Brand, Craft Digital Success, Revolutionize Your Business – One Click at a Time.",
+      "description": "Aurum Tech is your ideal partner in transforming your business ideas into a successful digital reality. We offer comprehensive solutions to help merchants and brand owners create professional online stores and websites, design innovative logos for brands, and develop engaging social media content. We help you build a strong online presence and elevate your brand to achieve sustainable growth and increase your sales."
+    },
+    "services": {
+      "title": "Our Services",
+      "websiteDev": {
+        "title": "Website Development",
+        "description": "Professional, responsive websites tailored to your brand identity and business goals."
+      },
+      "ecommerce": {
+        "title": "E-Commerce Solutions",
+        "description": "Custom online stores that drive sales with seamless checkout experiences and mobile optimization."
+      },
+      "socialMedia": {
+        "title": "Social Media Marketing",
+        "description": "Strategic campaigns that boost engagement, build brand awareness, and connect with your target audience."
+      },
+      "contentCreation": {
+        "title": "Content Creation",
+        "description": "Compelling visuals and copywriting that tell your brand story and resonate with your customers."
+      },
+      "consulting": {
+        "title": "Digital Consulting",
+        "description": "Expert guidance on digital strategy to help your business adapt, innovate, and thrive online."
+      },
+      "brandIdentity": {
+        "title": "Brand Identity Design",
+        "description": "Distinctive logos and brand materials that make you instantly recognizable and memorable."
+      }
+    },
+    "testimonial": "The AURUM TECH team exceeded expectations during the onboarding process, delivering seamless integration solutions that work smoothly without unnecessary interruptions, providing a flawless user experience from start to finish.",
+    "digitalGrowth": {
+      "title": "Empowering Your Digital Growth",
+      "description": "At AURUM TECH, we don't just offer services – we fuel your business growth through impactful digital solutions that are designed to meet your needs and exceed your expectations. Our goal is to drive measurable success, increase efficiency, and enable you to stay ahead in the competitive digital landscape."
+    },
+    "results": {
+      "transformation": {
+        "title": "Digital Transformation That Delivers Results",
+        "description": "Rather than simply providing technical solutions, we focus on transforming your business. By leveraging innovative technology and strategic planning, we help your brand thrive in the digital era."
+      },
+      "webSolutions": {
+        "title": "Results-Driven Web Solutions",
+        "description": "We create websites that are built for performance and user engagement, ensuring that your business stands out and your audience stays connected.",
+        "points": [
+          "Enhanced user experience for better engagement",
+          "Faster load times that lead to better conversion rates",
+          "Custom-built solutions tailored to your business goals"
+        ]
+      },
+      "ecommercePlatforms": {
+        "title": "Growth-Oriented E-Commerce Platforms",
+        "description": "We understand that e-commerce is more than just an online store. Our goal is to optimize your e-commerce platform for maximum profitability and long-term success.",
+        "points": [
+          "Optimized for conversion, turning visitors into paying customers",
+          "Seamless integration for a smoother shopping experience",
+          "Mobile-first design for increased mobile sales"
+        ]
+      },
+      "contentManagement": {
+        "title": "Smarter Content Management",
+        "description": "Our content management systems are designed to make your life easier, helping you streamline your content while ensuring that your brand's message remains consistent and impactful across all digital platforms.",
+        "points": [
+          "Effortless content management for time savings",
+          "Customizable to meet the unique needs of your business",
+          "Easy-to-use interface for quick updates and changes"
+        ]
+      },
+      "opportunities": {
+        "title": "Endless Opportunities for Growth",
+        "description": "We are not just about services; we are about unlocking new opportunities for your business to grow and evolve. Whether it's through better data insights, enhanced user experiences, or smarter digital strategies, we aim to provide you with measurable outcomes."
+      }
+    },
+    "globalPresence": {
+      "title": "Our Global Presence",
+      "description": "At AURUM TECH, we are a fully remote, online-first company that operates globally, providing exceptional digital solutions to businesses across the Middle East, Europe, and beyond. No matter where you are, we are just a click away to help you elevate your brand and achieve your goals.",
+      "regions": {
+        "arab": {
+          "title": "Arab Countries",
+          "description": "UAE, Saudi Arabia, Egypt, Kuwait, Qatar, and other countries across the Middle East and North Africa."
+        },
+        "europe": {
+          "title": "European Countries",
+          "description": "Denmark, Germany, UK, France, and other European nations with growing digital needs."
+        },
+        "worldwide": {
+          "title": "Worldwide",
+          "description": "Serving clients globally with tailored solutions that bridge geographic boundaries with digital excellence."
+        }
+      },
+      "footer": "Whether you're based in the heart of the Middle East, the European Union, or any other region, AURUM TECH is here to support your business with tailored digital solutions that ensure your success in the digital landscape."
+    }
+  },
+  "work": {
+    "pageIntro": {
+      "eyebrow": "Our work",
+      "title": "Innovative Solutions for Real-World Challenges",
+      "description": "At AURUM TECH, we deliver transformative digital solutions that drive measurable results for our clients. Our case studies showcase how we've helped businesses across diverse industries overcome challenges and achieve remarkable success."
+    },
+    "clients": {
+      "title": "You're in good company"
+    },
+    "testimonial": "\"Working with <em>Aurum Tech</em> has transformed our digital presence. Their team delivered innovative solutions that perfectly aligned with our business goals and exceeded our expectations.\"",
+    "caseStudies": {
+      "badge": "Our Case Studies",
+      "title": "Our Work – Transforming Ideas into Reality",
+      "description": "Discover how we've helped businesses across industries overcome challenges and achieve remarkable success through innovative technology solutions.",
+      "cta": "Start Your Journey",
+      "keyFeatures": "Key Features",
+      "cases": {
+        "ecommerce": {
+          "title": "E-Commerce Transformation",
+          "client": "Al-Majid Boutique",
+          "description": "Transform a traditional brick-and-mortar luxury boutique into a thriving e-commerce platform, resulting in a 200% increase in online sales within the first six months.",
+          "features": [
+            "Custom Shopify implementation with luxury-focused UX/UI",
+            "Seamless inventory management system integration",
+            "Mobile-first responsive design optimized for conversion"
+          ],
+          "testimonial": "AURUM TECH understood our brand ethos completely and delivered an online experience that captures the essence of our in-store luxury customer journey. The results have exceeded our expectations.",
+          "author": "Layla Al-Maktoum",
+          "role": "Marketing Director"
+        },
+        "marketing": {
+          "title": "Digital Marketing Campaign",
+          "client": "Al-Noor Tech",
+          "description": "Developed and executed a comprehensive digital marketing strategy for a SaaS startup, increasing user acquisition by 150% and reducing CAC by 30%.",
+          "features": [
+            "Targeted PPC campaigns across multiple platforms",
+            "Content marketing strategy with SEO optimization",
+            "Social media campaign with influencer partnerships"
+          ],
+          "testimonial": "The team at AURUM TECH delivered a marketing strategy that was not only creative but data-driven. Their approach to digital marketing helped us scale our user base while keeping our acquisition costs low.",
+          "author": "Zienab Aboeldahab",
+          "role": "Founder & CEO"
+        },
+        "branding": {
+          "title": "Brand Identity Overhaul",
+          "client": "Al-Baraka Finance",
+          "description": "Complete brand identity redesign for an established financial services firm, resulting in improved brand perception and a 45% increase in qualified leads.",
+          "features": [
+            "Comprehensive brand strategy and positioning",
+            "Logo redesign and visual identity system",
+            "Website redesign with conversion optimization"
+          ],
+          "testimonial": "AURUM TECH brought our brand into the modern era while respecting our legacy. The new brand identity has resonated strongly with both our existing clients and new prospects.",
+          "author": "Ahmed Al-Farsi",
+          "role": "Head of Marketing"
+        }
+      }
+    }
+  },
+  "contact": {
+    "pageIntro": {
+      "eyebrow": "Contact us",
+      "title": "Let's Transform Your Digital Presence",
+      "description": "Reach out to start your journey with AURUM TECH today."
+    },
+    "form": {
+      "title": "Project Inquiries",
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "phone": "Phone",
+      "countryCode": "Country Code",
+      "message": "Message",
+      "serviceType": "Service Type",
+      "serviceOptions": {
+        "website": "Website Development",
+        "ecommerce": "E-Commerce",
+        "marketing": "Digital Marketing",
+        "branding": "Branding & Design"
+      },
+      "submitButton": "Start Your Digital Journey",
+      "submittingButton": "Sending...",
+      "successMessage": "Thank you for your message! We'll be in touch shortly.",
+      "errorMessage": "There was an error sending your message. Please try again or contact us directly.",
+      "validation": {
+        "requiredFields": "Please fill in all fields."
+      }
+    },
+    "details": {
+      "title": "Our Global Presence",
+      "description": "At AURUM TECH, we are a fully remote, online-first company that operates globally. No matter where you are, we are just a click away to help you elevate your brand.",
+      "emailUs": "Email Us",
+      "emailDescription": "For inquiries and collaboration, feel free to reach out to us at:",
+      "emailLabels": {
+        "careers": "Careers",
+        "press": "Press"
+      },
+      "followUs": "Follow us"
+    },
+    "meta": {
+      "title": "Contact AURUM TECH",
+      "description": "Connect with our global team for exceptional digital solutions tailored to your business needs."
+    }
+  },
+  "about": {
+    "pageIntro": {
+      "eyebrow": "About Us",
+      "title": "Driven by Innovation, United by Purpose",
+      "description": "At AURUM TECH, we believe collaboration fuels creativity — and creativity drives results. We place our clients at the heart of every project, building digital solutions that are tailored, scalable, and future-focused."
+    },
+    "history": {
+      "foundingMission": "Founded with a mission to bridge the gap between businesses and smart technology, AURUM TECH operates as a fully online agency serving clients across the Arab world and Europe. Our diverse, passionate team brings together developers, designers, marketers, and strategists — all working remotely, seamlessly, and efficiently.",
+      "buildingExperiences": "We don't just build websites; we build experiences, foster connections, and empower brands to thrive in the digital era."
+    },
+    "stats": {
+      "experts": {
+        "value": 10,
+        "suffix": "+",
+        "label": "Fully Remote Experts",
+        "icon": "🌍"
+      },
+      "projects": {
+        "value": 70,
+        "suffix": "+",
+        "label": "Successful Projects",
+        "icon": "🚀"
+      },
+      "retention": {
+        "value": 90,
+        "suffix": "%",
+        "label": "Client Retention Rate",
+        "icon": "💼"
+      }
+    },
+    "culture": {
+      "eyebrow": "Our Culture",
+      "title": "Balance your passion with your passion for life.",
+      "description": "At AURUM TECH, we believe that great work starts with a great culture. We're a remote-first team of passionate creatives, developers, and strategists who thrive on flexibility, mutual respect, and shared vision.",
+      "values": {
+        "growth": {
+          "title": "Growth",
+          "description": "We encourage continuous learning and professional development to help our team evolve with technology."
+        },
+        "trust": {
+          "title": "Trust",
+          "description": "Our remote setup is built on accountability and results — we trust our team to deliver without micromanagement."
+        },
+        "empathy": {
+          "title": "Empathy",
+          "description": "We value each individual's well-being and maintain a supportive environment that respects personal boundaries and work-life balance."
+        }
+      },
+      "inspirationalPhrases": [
+        "Whether you're coding from Cairo or designing from Paris, you'll feel connected, valued, and empowered.",
+        "From Riyadh to Rome — our culture travels beyond borders.",
+        "Work remotely, collaborate globally, grow continuously.",
+        "At AURUM TECH, your passion drives our innovation.",
+        "We don't just work online — we thrive online.",
+        "Creativity knows no timezone at AURUM TECH."
+      ]
+    }
+  },
+  "vision": {
+    "pageIntro": {
+      "eyebrow": "Vision",
+      "title": "Your Vision, Our Expertise",
+      "description": "At AURUM TECH, we don't just build websites – we craft digital experiences that make a difference. We specialize in creating personalized, cutting-edge solutions that align with your business goals and provide lasting value."
+    },
+    "approach": {
+      "title": "Our Approach",
+      "description": "We believe in a holistic approach that puts your business needs at the center, creating solutions that are not just visually stunning but strategically sound."
+    },
+    "features": {
+      "understanding": {
+        "title": "Understanding Your Needs",
+        "description": "We start by diving deep into your business and understanding your unique challenges and objectives. This helps us create a roadmap that aligns with your vision."
+      },
+      "design": {
+        "title": "Creative & Functional Design",
+        "description": "Our expert designers create intuitive, visually appealing interfaces, while our developers build the robust technical foundations that bring your ideas to life."
+      },
+      "service": {
+        "title": "End-to-End Service",
+        "description": "From initial concept to final delivery, we handle everything to ensure a smooth and efficient experience, offering continuous support along the way."
+      }
+    },
+    "standOut": {
+      "badge": "Why We Stand Out",
+      "title": "Excellence in every pixel",
+      "valueProps": {
+        "customerCentric": {
+          "title": "Customer-Centric",
+          "description": "We prioritize your goals and work closely with you, ensuring that the solutions we build are tailored to your needs and deliver real value."
+        },
+        "expertTeam": {
+          "title": "Expert Team",
+          "description": "Our team consists of passionate designers, developers, and strategists, each bringing expertise and creativity to every project."
+        },
+        "innovativeTech": {
+          "title": "Innovative Technology",
+          "description": "We use the latest tools and technologies to ensure that your project is not only modern but scalable and ready for the future."
+        }
+      }
+    },
+    "cta": {
+      "title": "Let's Bring Your Ideas to Life",
+      "description": "Ready to start your digital journey? Reach out to us today and let's collaborate to create something exceptional that stands out in the digital world."
+    }
+  },
+  "faqs": {
+    "pageIntro": {
+      "eyebrow": "FAQs",
+      "title": "Frequently Asked Questions",
+      "description": "Find answers to common questions about our services, processes, and support. If you don't see your question here, feel free to reach out to our team directly."
+    },
+    "questions": {
+      "services": {
+        "question": "What services does AURUM TECH offer?",
+        "answer": "We offer a comprehensive range of digital services including website development, e-commerce solutions, social media marketing, content creation, digital consulting, and brand identity design. Each service is tailored to meet your specific business needs and goals."
+      },
+      "timeline": {
+        "question": "How long does it take to develop a website?",
+        "answer": "Our services typically take 2-4 weeks for a standard website and 4-8 weeks for a complex e-commerce platform. We'll provide you with a specific timeline during our initial consultation."
+      },
+      "payment": {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept multiple payment methods including credit cards, bank transfers, and PayPal. We typically work with a 50% upfront deposit to begin work, with the remaining balance due upon project completion. For larger projects, we can arrange milestone-based payment schedules."
+      },
+      "maintenance": {
+        "question": "Do you offer website maintenance after launch?",
+        "answer": "Yes, we offer ongoing website maintenance and support packages to keep your site secure, updated, and performing optimally. Our maintenance packages include regular updates, security monitoring, performance optimization, and technical support."
+      },
+      "revisions": {
+        "question": "How do you handle revisions to the work?",
+        "answer": "We include a specific number of revision rounds in each project proposal. For most projects, we include 2-3 rounds of revisions. Additional revisions beyond the included amount are billed at our standard hourly rate. We always work closely with you to ensure you're satisfied with the final product."
+      },
+      "support": {
+        "question": "What kind of support do you provide?",
+        "answer": "We provide comprehensive support through multiple channels including email, phone, and WhatsApp. Our standard support hours are Monday to Friday, 9 AM to 6 PM (GMT+3). For clients with maintenance packages, we also offer emergency support for critical issues."
+      },
+      "guarantees": {
+        "question": "Do you offer any guarantees for your work?",
+        "answer": "Yes, we stand behind our work with a satisfaction guarantee. If any aspect of our deliverables doesn't match what was agreed upon in the project scope, we'll make the necessary adjustments at no additional cost. We also provide a 30-day warranty period after project completion to address any issues that might arise."
+      },
+      "getStarted": {
+        "question": "How do we get started working together?",
+        "answer": "Getting started is easy! Simply contact us through our website or send us a message on WhatsApp. We'll schedule an initial consultation to discuss your project needs, goals, and timeline. After the consultation, we'll provide a detailed proposal and quote for your project."
+      }
+    }
+  },
+  "privacy": {
+    "pageIntro": {
+      "eyebrow": "Privacy",
+      "title": "Privacy Policy",
+      "intro": "At AURUM TECH, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit our website or use our services.",
+      "lastUpdated": "Last updated: January 15, 2025"
+    },
+    "sections": {
+      "dataCollection": {
+        "title": "What Personal Data We Collect",
+        "intro": "We may collect the following types of personal information:",
+        "items": [
+          "<strong>Contact Information:</strong> Name, email address, phone number, and business address.",
+          "<strong>Account Information:</strong> Username, password, and account preferences.",
+          "<strong>Technical Information:</strong> IP address, browser type, device information, pages visited, and time spent on our website.",
+          "<strong>Communication Data:</strong> Copies of emails, messages, or other communications you have with us.",
+          "<strong>Project Information:</strong> Details about your projects, requirements, and preferences.",
+          "<strong>Business Data:</strong> Commercial registration number (CR), IBAN, financial account details, social media credentials, website URL, and other data based on the agreement between us and the client."
+        ]
+      },
+      "dataUsage": {
+        "title": "How We Use Your Data",
+        "intro": "We use your personal information for the following purposes:",
+        "items": [
+          "To provide and maintain our services",
+          "To communicate with you about our services, updates, and offers",
+          "To personalize your experience on our website",
+          "To improve our website and services",
+          "To respond to your inquiries and provide customer support",
+          "To process transactions and manage your account",
+          "To comply with legal obligations"
+        ],
+        "retention": "We will only retain your personal information for as long as necessary to fulfill the purposes for which it was collected."
+      },
+      "thirdParty": {
+        "title": "Third-Party Services",
+        "para1": "We may use third-party services to help us operate our website and deliver our services. These third parties may have access to your personal information only to perform specific tasks on our behalf and are obligated not to disclose or use it for any other purpose.",
+        "para2": "Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these websites. We encourage you to read the privacy policies of every website you visit.",
+        "intro": "Third-party services we may use include:",
+        "items": [
+          "Google Analytics (for website analytics)",
+          "Payment processors (for handling transactions)",
+          "Email marketing services (for newsletters and communications)",
+          "Cloud hosting providers (for website hosting and storage)",
+          "Customer relationship management (CRM) systems"
+        ]
+      },
+      "rights": {
+        "title": "Your Rights",
+        "intro": "Depending on your location, you may have certain rights regarding your personal information:",
+        "items": [
+          "<strong>Access:</strong> You have the right to request copies of your personal information.",
+          "<strong>Rectification:</strong> You have the right to request that we correct any information you believe is inaccurate or complete information you believe is incomplete.",
+          "<strong>Erasure:</strong> You have the right to request that we erase your personal information under certain conditions.",
+          "<strong>Restriction:</strong> You have the right to request that we restrict the processing of your personal information under certain conditions.",
+          "<strong>Data Portability:</strong> You have the right to request that we transfer the data we have collected to another organization or directly to you under certain conditions.",
+          "<strong>Objection:</strong> You have the right to object to our processing of your personal information under certain conditions."
+        ],
+        "exercise": "If you would like to exercise any of these rights, please contact us using the information provided below."
+      },
+      "security": {
+        "title": "Data Security",
+        "para1": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or method of electronic storage is 100% secure, and we cannot guarantee its absolute security.",
+        "para2": "We regularly review our information collection, storage, and processing practices to protect against unauthorized access to our systems."
+      },
+      "changes": {
+        "title": "Changes to This Privacy Policy",
+        "para1": "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the \"Last updated\" date.",
+        "para2": "We recommend that you review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "intro": "If you have any questions about this Privacy Policy or our data practices, please contact us:",
+        "email": "contact@aurumtech.com"
+      }
+    }
+  },
+  "terms": {
+    "pageIntro": {
+      "eyebrow": "Legal",
+      "title": "Terms of Service",
+      "intro": "Please read these Terms of Service carefully before using the AURUM TECH website or services. By accessing or using our services, you agree to be bound by these terms.",
+      "lastUpdated": "Last updated: January 15, 2025"
+    },
+    "sections": {
+      "introduction": {
+        "title": "1. Introduction",
+        "para1": "These Terms of Service (\"Terms\") govern your access to and use of the AURUM TECH website, products, and services (\"Services\"). By accessing or using our Services, you agree to be bound by these Terms and our Privacy Policy.",
+        "para2": "\"AURUM TECH,\" \"we,\" \"us,\" and \"our\" refer to AURUM TECH and its subsidiaries, affiliates, officers, directors, employees, agents, and contractors. \"You\" and \"your\" refer to the individual or entity using our Services.",
+        "para3": "We reserve the right to modify these Terms at any time. We will provide notice of any material changes by posting the updated Terms on our website. Your continued use of our Services after such changes constitutes your acceptance of the modified Terms."
+      },
+      "userObligations": {
+        "title": "2. User Obligations",
+        "intro": "By using our Services, you agree to:",
+        "items": [
+          "Provide accurate and complete information when registering for our Services or communicating with us.",
+          "Maintain the security and confidentiality of any passwords or access credentials associated with your account.",
+          "Use our Services in compliance with all applicable laws and regulations.",
+          "Not use our Services for any illegal or unauthorized purpose.",
+          "Not attempt to probe, scan, or test the vulnerability of our systems or networks.",
+          "Not interfere with or disrupt the integrity or performance of our Services or the data contained therein.",
+          "Provide all necessary materials, approvals, and feedback in a timely manner as required for the completion of your project."
+        ]
+      },
+      "paymentTerms": {
+        "title": "3. Payment Terms",
+        "intro": "Payment terms for our Services are as follows:",
+        "items": [
+          "A 50% non-refundable deposit is required to begin work on your project, which is refundable only if the project has not started. Once the project begins, this deposit becomes non-refundable.",
+          "The remaining 50% balance is due upon project completion.",
+          "Payments must be made in USD. If the client is unable to pay in USD, we can arrange an alternative payment method in the local currency if we have accounts in the client's country. Otherwise, payments should be made through the CEO in Egypt via a bank transfer in either Egyptian Pounds (EGP) or USD.",
+          "All payments must be received before project delivery.",
+          "All fees are exclusive of taxes, which will be added to invoices where applicable.",
+          "We reserve the right to suspend or terminate services if payments are not received on time according to the agreed schedule."
+        ]
+      },
+      "intellectualProperty": {
+        "title": "4. Intellectual Property",
+        "intro": "Intellectual property rights are handled as follows:",
+        "items": [
+          "AURUM TECH retains ownership of all intellectual property rights in our Services, including but not limited to software, designs, code, and methodologies that are not specifically created for you.",
+          "Upon receipt of full payment, you will receive ownership rights to the final deliverables created specifically for your project, as detailed in the project proposal.",
+          "We retain the right to display and use your project as part of our portfolio and marketing materials, unless otherwise agreed in writing.",
+          "You retain ownership of all materials, content, and intellectual property you provide to us in connection with your project."
+        ],
+        "indemnity": "You agree to indemnify and hold AURUM TECH harmless from any claims, damages, or liabilities arising from content or materials you provide to us."
+      },
+      "termination": {
+        "title": "5. Termination Policy",
+        "intro": "Either party may terminate the service agreement under the following conditions:",
+        "items": [
+          "You may terminate the agreement at any time by providing written notice. In such cases, you will be responsible for paying for all services rendered up to the termination date, and no refund will be issued for the initial deposit.",
+          "AURUM TECH may terminate the agreement if you breach any of these Terms and fail to cure such breach within 15 days of receiving notice.",
+          "We reserve the right to terminate the agreement if we determine, in our sole discretion, that your project requirements have significantly changed from the original scope, making it impossible or impractical to complete the project as originally agreed."
+        ],
+        "rights": "Upon termination, you will be provided with all completed work for which you have paid, and all rights and obligations of both parties under these Terms will terminate except those which by their nature survive termination."
+      },
+      "liability": {
+        "title": "6. Limitation of Liability",
+        "intro": "To the maximum extent permitted by law, AURUM TECH shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from:",
+        "items": [
+          "Your use or inability to use our Services.",
+          "Any unauthorized access to or use of our servers and/or any personal information stored therein.",
+          "Any interruption or cessation of transmission to or from our Services.",
+          "Any bugs, viruses, trojan horses, or the like that may be transmitted to or through our Services by any third party."
+        ],
+        "limit": "In no event shall our total liability to you for all claims exceed the amount paid by you to AURUM TECH for the Services giving rise to the claim."
+      },
+      "governingLaw": {
+        "title": "7. Governing Law",
+        "text": "These Terms shall be governed by and construed in accordance with the applicable laws, without regard to its conflict of law principles. Any legal action or proceeding arising out of or relating to these Terms shall be brought exclusively in the courts of the jurisdiction where the company is registered, and you consent to the personal jurisdiction of such courts."
+      },
+      "contact": {
+        "title": "8. Contact Information",
+        "intro": "If you have any questions about these Terms, please contact us:",
+        "email": "contact@aurumtech.com"
+      }
+    }
+  },
+  "emails": {
+    "pageIntro": {
+      "eyebrow": "Contact",
+      "title": "Our Official Email Addresses",
+      "description": "Reach out to the appropriate department at Aurum Tech using our official email addresses listed below."
+    },
+    "categories": {
+      "sales": "Sales",
+      "salesDescription": "For inquiries about our products, services, and pricing packages. Contact us to get customized price quotes for your project.",
+      "contact": "General Contact",
+      "contactDescription": "For general inquiries, partnerships, collaboration opportunities, and suggestions. We welcome all your questions and ideas to improve our services.",
+      "support": "Technical Support",
+      "supportDescription": "For technical issues, bug reports, and product assistance. Our technical support team is available 24/7 to help you.",
+      "care": "Customer Care",
+      "careDescription": "For assistance with existing orders, ongoing projects, and project updates. We care about your comfort throughout our engagement.",
+      "customer": "Customer Service",
+      "customerDescription": "For help with account management, billing issues, and subscriptions. Our team is ready to answer all your account-related questions.",
+      "admin": "Administration",
+      "adminDescription": "For official business, legal matters, formal communications, and strategic partnerships. Contact our company management for important matters."
+    }
+  }
+}

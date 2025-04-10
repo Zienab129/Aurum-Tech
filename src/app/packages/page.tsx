@@ -1,0 +1,127 @@
+'use client'
+
+import { Border } from '@/components/Border'
+import { Button } from '@/components/Button'
+import { ContactSection } from '@/components/ContactSection'
+import { Container } from '@/components/Container'
+import { FadeIn, FadeInStagger } from '@/components/FadeIn'
+import { PageIntro } from '@/components/PageIntro'
+import { useTranslation } from '@/localization/client'
+
+function PriceTag({
+  children,
+  className,
+  ...props
+}: React.ComponentPropsWithoutRef<'span'>) {
+  return (
+    <span
+      className={`mt-3 font-display text-5xl font-medium tracking-tight text-neutral-950 ${className}`}
+      {...props}
+    >
+      {children}
+    </span>
+  )
+}
+
+function Plan({
+  name,
+  oldPrice,
+  price,
+  children,
+}: {
+  name: string
+  oldPrice: string
+  price: string
+  children: React.ReactNode
+}) {
+  const { t } = useTranslation()
+
+  return (
+    <FadeIn className="h-full">
+      <Border className="flex h-full flex-col p-8 shadow-lg">
+        <h3 className="font-display text-2xl font-semibold text-neutral-950">
+          {name}
+        </h3>
+        <div className="mt-6 flex items-end gap-x-3">
+          <span className="text-lg text-neutral-500 line-through">
+            {oldPrice}
+          </span>
+          <PriceTag>{price}</PriceTag>
+        </div>
+        <div className="mt-6 flex grow flex-col">
+          <div className="flex grow flex-col justify-between gap-y-6 text-base text-neutral-600">
+            {children}
+          </div>
+          <Button
+            href="https://wa.me/+966550959456"
+            className="mt-8 mx-auto w-fit px-6 py-2.5"
+            aria-label={`${t('packages.getStarted')} ${name}`}
+          >
+            {t('packages.contactViaWhatsApp')}
+          </Button>
+        </div>
+      </Border>
+    </FadeIn>
+  )
+}
+
+export default function Packages() {
+  const { t } = useTranslation()
+
+  return (
+    <>
+      <PageIntro
+        eyebrow={t('packages.pageIntro.eyebrow')}
+        title={t('packages.pageIntro.title')}
+      >
+        <p>{t('packages.pageIntro.description')}</p>
+      </PageIntro>
+
+      <Container className="mt-16">
+        <FadeInStagger className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-3">
+          <Plan
+            name={t('packages.plans.starter.name')}
+            oldPrice="$500"
+            price="$300"
+          >
+            <p className="text-sm text-neutral-500 italic">
+              {t('packages.plans.details')}
+            </p>
+          </Plan>
+          <Plan
+            name={t('packages.plans.professional.name')}
+            oldPrice="$700"
+            price="$500"
+          >
+            <p className="text-sm text-neutral-500 italic">
+              {t('packages.plans.details')}
+            </p>
+          </Plan>
+          <Plan
+            name={t('packages.plans.premium.name')}
+            oldPrice="$1000"
+            price="$700"
+          >
+            <p className="text-sm text-neutral-500 italic">
+              {t('packages.plans.details')}
+            </p>
+          </Plan>
+        </FadeInStagger>
+
+        <div className="mt-24 text-center">
+          <h2 className="font-display text-2xl font-semibold text-neutral-950">
+            {t('packages.readyToStart')}
+          </h2>
+          <p className="mt-4 text-lg text-neutral-600">
+            {t('packages.contactInfo')}
+          </p>
+          <Button href="https://wa.me/+966550959456" className="mt-10">
+            {t('packages.contactUs')}
+          </Button>
+        </div>
+      </Container>
+
+      <ContactSection />
+    </>
+  )
+}
