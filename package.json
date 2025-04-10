@@ -5,10 +5,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:analyze": "ANALYZE=true next build",
     "start": "next start",
+    "lint": "next lint",
     "vercel-build": "npm run build",
     "export": "next build",
-    "lint": "next lint"
+    "optimize:images": "next-image-export-optimizer",
+    "lighthouse": "lighthouse http://localhost:3000 --view --output-path=./lighthouse-report.html",
+    "precommit": "npm run lint && npm run test:ci",
+    "test:ci": "echo 'No tests yet'",
+    "analyze": "cross-env ANALYZE=true next build",
+    "clean": "rm -rf .next out node_modules/.cache"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {

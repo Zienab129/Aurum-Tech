@@ -1,13 +1,32 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { RootLayout } from '@/components/RootLayout'
 import { I18nProvider } from '@/components/I18nProvider'
 import dynamic from 'next/dynamic'
-import '@/styles/tailwind.css'
+import { CriticalCSS } from '@/components/CriticalCss'
+import { ResourceHints } from '@/components/ResourceHints'
 import { monaSans } from './fonts'
+import '@/styles/tailwind.css'
 
+// Dynamic imports for JS splitting and delayed hydration
 const ErrorBoundary = dynamic(() => import('@/components/ErrorBoundary'), {
   ssr: false,
+  loading: () => <div className="min-h-screen" />,
 })
+
+// Define viewport settings for optimal mobile experience
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  minimumScale: 1,
+  userScalable: true,
+  viewportFit: 'cover',
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#000000' },
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+  ],
+  colorScheme: 'dark light',
+}
 
 export const metadata: Metadata = {
   title: {
@@ -91,11 +110,6 @@ export const metadata: Metadata = {
     shortcut: '/aurum-favicon.png',
   },
   manifest: '/manifest.json',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-  },
   verification: {
     google: 'google-site-verification',
   },
@@ -103,6 +117,9 @@ export const metadata: Metadata = {
     'theme-color': '#000000',
   },
 }
+
+// Define key navigation paths for prefetching
+const KEY_NAVIGATION_PATHS = ['/about/', '/contact/', '/work/']
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -113,22 +130,56 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       className={`h-full bg-neutral-950 text-base antialiased ${monaSans.variable}`}
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
+        {/* Inline critical CSS to eliminate render-blocking resources */}
+        <CriticalCSS />
+
+        {/* Resource hints for faster loading */}
+        <ResourceHints
+          preloadFonts={true}
+          preloadHero={true}
+          prefetchPages={KEY_NAVIGATION_PATHS}
         />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-        <script src="/register-sw.js" defer></script>
+
+        {/* Service worker registration - deferred loading */}
+        <script src="/register-sw.js" defer data-no-instant />
+
+        {/* Performance monitoring script - non-blocking */}
+        <script src="/perf-monitor.js" async />
+
+        {/* Mark document as JS-loaded to prevent FOUC */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.setAttribute('data-js-loaded', 'true');`,
+          }}
+        />
       </head>
       <body className="flex min-h-full flex-col" suppressHydrationWarning>
+        {/* Skip navigation link for accessibility */}
+        <a href="#main-content" className="skip-nav">
+          Skip to main content
+        </a>
+
         <ErrorBoundary>
           <I18nProvider>
-            <RootLayout>{children}</RootLayout>
+            <RootLayout>
+              <main id="main-content">{children}</main>
+            </RootLayout>
           </I18nProvider>
         </ErrorBoundary>
+
+        {/* Prevent layout shifts from font loading */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(() => {
+                  document.documentElement.classList.add('fonts-loaded');
+                });
+              }
+            `,
+          }}
+          defer
+        />
       </body>
     </html>
   )

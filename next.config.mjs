@@ -15,12 +15,15 @@ import { unifiedConditional } from 'unified-conditional'
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx'],
 
-  // Image optimization settings
+  // Advanced image optimization
   images: {
-    formats: ['image/webp', 'image/avif'],
+    formats: ['image/avif', 'image/webp'], // Prioritize AVIF over WebP
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60 * 60 * 24 * 30, // 30 days
+    minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year for better caching
+    dangerouslyAllowSVG: true, // Allow SVG optimization
+    contentDispositionType: 'attachment',
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: 'https',
@@ -29,19 +32,44 @@ const nextConfig = {
     ],
   },
 
-  // Compression and minification
+  // Production optimization settings
+  swcMinify: true, // Use SWC minifier for better performance
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production', // Remove console in prod
+    styledComponents: true, // More efficient styled-components
+  },
+
+  // Optimized bundle configuration
+  experimental: {
+    optimizeCss: true, // Remove unused CSS
+    optimizePackageImports: [
+      '@headlessui/react',
+      'framer-motion',
+      'react-i18next',
+      'clsx',
+    ],
+    serverActions: {
+      bodySizeLimit: '2mb', // Limit server action payload size
+    },
+    serverComponentsExternalPackages: [], // Optimize server components
+    scrollRestoration: true, // Improve scroll experience
+    forceSwcTransforms: true, // Force optimized transforms
+    craCompat: false, // Optimize for Next.js patterns
+    webVitalsAttribution: ['CLS', 'LCP', 'FCP', 'FID', 'TTFB'], // Track all core web vitals
+  },
+
+  // Maximize compression
   compress: true,
 
-  // Add trailing slash to improve SEO consistency
+  // Static optimization flags
+  output: 'standalone', // Optimize for production deployments
+  poweredByHeader: false, // Remove unnecessary headers
+  reactStrictMode: true, // Enable strict mode for better error detection
+
+  // Add trailing slash for consistent URLs
   trailingSlash: true,
 
-  // Use React strict mode for better error detection
-  reactStrictMode: true,
-
-  // Configure proper content security policy
-  poweredByHeader: false,
-
-  // Configure HTTP headers for better caching and security
+  // Comprehensive HTTP caching headers
   async headers() {
     return [
       {
@@ -63,10 +91,23 @@ const nextConfig = {
             key: 'Referrer-Policy',
             value: 'strict-origin-when-cross-origin',
           },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload',
+          },
+          {
+            key: 'Permissions-Policy',
+            value:
+              'camera=(), microphone=(), geolocation=(), interest-cohort=()',
+          },
         ],
       },
       {
-        source: '/fonts/(.*)',
+        source: '/fonts/:path*',
         headers: [
           {
             key: 'Cache-Control',
@@ -75,20 +116,56 @@ const nextConfig = {
         ],
       },
       {
-        source: '/images/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=86400, stale-while-revalidate=31536000',
-          },
-        ],
-      },
-      {
-        source: '/_next/static/(.*)',
+        source: '/images/:path*',
         headers: [
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/_next/static/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/_next/image/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+      {
+        source: '/api/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'no-store, max-age=0',
+          },
+        ],
+      },
+      {
+        source: '/:path*.json',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, stale-while-revalidate=31536000',
+          },
+        ],
+      },
+      {
+        source: '/:path*.xml',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, stale-while-revalidate=31536000',
           },
         ],
       },
