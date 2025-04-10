@@ -51,12 +51,9 @@
     },
     "plans": {
       "starter": {
-        "name": "Start Plan"
+        "name": "Starter Plan"
       },
       "professional": {
-        "name": "Professional Plan"
-      },
-      "business": {
         "name": "Business Plan"
       },
       "premium": {

@@ -66,7 +66,8 @@ function Plan({
 }
 
 export default function Packages() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const isArabic = i18n.language === 'ar'
 
   return (
     <>
@@ -80,7 +81,7 @@ export default function Packages() {
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-3">
           <Plan
-            name={t('packages.plans.starter.name')}
+            name={isArabic ? 'الباقة المبتدئة' : 'Starter Plan'}
             oldPrice="$500"
             price="$270"
           >
@@ -89,7 +90,7 @@ export default function Packages() {
             </p>
           </Plan>
           <Plan
-            name={t('packages.plans.business.name')}
+            name={isArabic ? 'باقة الأعمال' : 'Business Plan'}
             oldPrice="$700"
             price="$450"
           >
@@ -98,7 +99,7 @@ export default function Packages() {
             </p>
           </Plan>
           <Plan
-            name={t('packages.plans.premium.name')}
+            name={isArabic ? 'الباقة المتميزة' : 'Premium Plan'}
             oldPrice="$1000"
             price="$650"
           >
