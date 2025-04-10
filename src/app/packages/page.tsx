@@ -111,7 +111,7 @@ export default function Packages() {
 
         <div className="mt-24 text-center">
           <h2 className="font-display text-2xl font-semibold text-neutral-950">
-            {t('packages.readyToStart')}
+            {isArabic ? 'هل أنت جاهز للبدء معنا؟' : 'Ready to start with us?'}
           </h2>
           <p className="mt-4 text-lg text-neutral-600">
             {t('packages.contactInfo')}
