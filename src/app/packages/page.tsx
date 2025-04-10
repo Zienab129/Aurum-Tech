@@ -54,7 +54,7 @@ function Plan({
           </div>
           <Button
             href="https://wa.me/+966550959456"
-            className="mt-8 mx-auto w-fit px-6 py-2.5"
+            className="mx-auto mt-8 w-fit px-6 py-2.5"
             aria-label={`${t('packages.getStarted')} ${name}`}
           >
             {t('packages.contactViaWhatsApp')}
@@ -82,16 +82,16 @@ export default function Packages() {
           <Plan
             name={t('packages.plans.starter.name')}
             oldPrice="$500"
-            price="$300"
+            price="$270"
           >
             <p className="text-sm text-neutral-500 italic">
               {t('packages.plans.details')}
             </p>
           </Plan>
           <Plan
-            name={t('packages.plans.professional.name')}
+            name={t('packages.plans.business.name')}
             oldPrice="$700"
-            price="$500"
+            price="$450"
           >
             <p className="text-sm text-neutral-500 italic">
               {t('packages.plans.details')}
@@ -100,7 +100,7 @@ export default function Packages() {
           <Plan
             name={t('packages.plans.premium.name')}
             oldPrice="$1000"
-            price="$700"
+            price="$650"
           >
             <p className="text-sm text-neutral-500 italic">
               {t('packages.plans.details')}
