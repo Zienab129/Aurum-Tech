@@ -7,6 +7,7 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { useTranslation } from '@/localization/client'
+import { useEffect } from 'react'
 
 function PriceTag({
   children,
@@ -68,6 +69,26 @@ function Plan({
 export default function Packages() {
   const { t, i18n } = useTranslation()
   const isArabic = i18n.language === 'ar'
+
+  // Force rerender on component mount and prevent caching
+  useEffect(() => {
+    // This will force a re-evaluation of the component when it mounts
+    console.log('Packages component mounted at:', new Date().toISOString())
+
+    // Force browser to reload the page without cache
+    const disableCache = () => {
+      if (typeof window !== 'undefined') {
+        // Force page to load without cache when clicking back button
+        window.onpageshow = function (event) {
+          if (event.persisted) {
+            window.location.reload()
+          }
+        }
+      }
+    }
+
+    disableCache()
+  }, [])
 
   return (
     <>
