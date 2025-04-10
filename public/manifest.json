@@ -1,0 +1,32 @@
+{
+  "name": "Aurum Tech - Premium Digital Solutions",
+  "short_name": "Aurum Tech",
+  "description": "Aurum Tech provides premium digital solutions for businesses across the Middle East, Europe, and globally.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/aurum-favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/aurum-favicon-large.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/aurum-favicon-large.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/aurum-favicon-large.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

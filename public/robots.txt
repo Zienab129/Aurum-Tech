@@ -1,0 +1,11 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://aurumtech.com/sitemap.xml
+
+# Disallow admin area
+User-agent: *
+Disallow: /api/
+Disallow: /_next/ 

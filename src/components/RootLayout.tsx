@@ -9,7 +9,7 @@ import {
   useState,
 } from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import clsx from 'clsx'
 import { motion, MotionConfig, useReducedMotion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
@@ -20,6 +20,7 @@ import { Footer } from '@/components/Footer'
 import { GridPattern } from '@/components/GridPattern'
 import { SocialMedia } from '@/components/SocialMedia'
 import { LanguageToggle } from '@/components/LanguageToggle'
+import { LocalBusinessStructuredData } from './StructuredData'
 
 // Import i18n configuration
 import '@/localization/i18n'
@@ -61,7 +62,8 @@ function Header({
   toggleRef: React.RefObject<HTMLButtonElement>
   invert?: boolean
 }) {
-  let { setLogoHovered } = useContext(RootLayoutContext)!
+  const context = useContext(RootLayoutContext)
+  const setLogoHovered = context?.setLogoHovered ?? (() => {})
   const { t } = useTranslation()
 
   return (
@@ -193,6 +195,8 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
   let shouldReduceMotion = useReducedMotion()
   const { t, i18n } = useTranslation()
   const isRTL = i18n.language === 'ar'
+  const router = useRouter()
+  const context = useContext(RootLayoutContext)
 
   // Use separate useEffect for document updates to avoid hydration mismatches
   useEffect(() => {
@@ -220,136 +224,168 @@ function RootLayoutInner({ children }: { children: React.ReactNode }) {
   }, [])
 
   return (
-    <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
-      <header>
-        <div
-          className="absolute top-2 right-0 left-0 z-40 pt-14"
-          aria-hidden={expanded ? 'true' : undefined}
-          // @ts-ignore (https://github.com/facebook/react/issues/17157)
-          inert={expanded ? '' : undefined}
-        >
-          <Header
-            panelId={panelId}
-            icon={MenuIcon}
-            toggleRef={openRef}
-            expanded={expanded}
-            onToggle={() => {
-              setExpanded((expanded) => !expanded)
-              window.setTimeout(() =>
-                closeRef.current?.focus({ preventScroll: true }),
-              )
-            }}
-          />
-        </div>
+    <>
+      <LocalBusinessStructuredData
+        data={{
+          name: 'Aurum Tech',
+          description:
+            'Aurum Tech provides premium digital solutions for businesses across the Middle East, Europe, and globally.',
+          url: 'https://aurumtech.com',
+          logo: 'https://aurumtech.com/images/logo.png',
+          address: {
+            streetAddress: 'Business Bay',
+            addressLocality: 'Dubai',
+            addressRegion: 'Dubai',
+            postalCode: '00000',
+            addressCountry: 'UAE',
+          },
+          contactPoint: {
+            telephone: '+971 4 123 4567',
+            contactType: 'customer service',
+            email: 'contact@aurumtech.com',
+          },
+          sameAs: [
+            'https://facebook.com/aurumtech',
+            'https://twitter.com/aurumtech',
+            'https://instagram.com/aurumtech',
+            'https://linkedin.com/company/aurumtech',
+          ],
+        }}
+      />
 
-        <motion.div
-          layout
-          id={panelId}
-          style={{ height: expanded ? 'auto' : '0.5rem' }}
-          className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
-          aria-hidden={expanded ? undefined : 'true'}
-          // @ts-ignore (https://github.com/facebook/react/issues/17157)
-          inert={expanded ? undefined : ''}
-        >
-          <motion.div layout className="bg-neutral-800">
-            <div ref={navRef} className="bg-neutral-950 pt-14 pb-16">
-              <Header
-                invert
-                panelId={panelId}
-                icon={XIcon}
-                toggleRef={closeRef}
-                expanded={expanded}
-                onToggle={() => {
-                  setExpanded((expanded) => !expanded)
-                  window.setTimeout(() =>
-                    openRef.current?.focus({ preventScroll: true }),
-                  )
-                }}
-              />
-            </div>
-            <Navigation />
-            <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
-              <Container>
-                <div
-                  className={clsx(
-                    'grid grid-cols-1 gap-y-10 pt-10 pb-16 sm:pt-16',
-                    isRTL
-                      ? 'sm:grid-flow-dense sm:grid-cols-2'
-                      : 'sm:grid-cols-2',
-                  )}
-                >
-                  <div>
-                    <h2 className="font-display text-base font-semibold text-white">
-                      {t('footer.offices')}
-                    </h2>
-                    <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
-                      <div>
-                        <h3 className="font-display text-sm font-medium text-white">
-                          {t('footer.middleEast')}
-                        </h3>
-                        <p className="mt-2 text-sm text-neutral-300">
-                          {t('footer.middleEastRegions')}
-                        </p>
-                      </div>
-                      <div>
-                        <h3 className="font-display text-sm font-medium text-white">
-                          {t('footer.europe')}
-                        </h3>
-                        <p className="mt-2 text-sm text-neutral-300">
-                          {t('footer.europeRegions')}
-                        </p>
-                      </div>
-                      <div>
-                        <h3 className="font-display text-sm font-medium text-white">
-                          {t('footer.worldwide')}
-                        </h3>
-                        <p className="mt-2 text-sm text-neutral-300">
-                          {t('footer.worldwideRegions')}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+      <MotionConfig
+        transition={shouldReduceMotion ? { duration: 0 } : undefined}
+      >
+        <header>
+          <div
+            className="absolute top-2 right-0 left-0 z-40 pt-14"
+            aria-hidden={expanded ? 'true' : undefined}
+            // @ts-ignore (https://github.com/facebook/react/issues/17157)
+            inert={expanded ? '' : undefined}
+          >
+            <Header
+              panelId={panelId}
+              icon={MenuIcon}
+              toggleRef={openRef}
+              expanded={expanded}
+              onToggle={() => {
+                setExpanded((expanded) => !expanded)
+                window.setTimeout(() =>
+                  closeRef.current?.focus({ preventScroll: true }),
+                )
+              }}
+            />
+          </div>
+
+          <motion.div
+            layout
+            id={panelId}
+            style={{ height: expanded ? 'auto' : '0.5rem' }}
+            className="relative z-50 overflow-hidden bg-neutral-950 pt-2"
+            aria-hidden={expanded ? undefined : 'true'}
+            // @ts-ignore (https://github.com/facebook/react/issues/17157)
+            inert={expanded ? undefined : ''}
+          >
+            <motion.div layout className="bg-neutral-800">
+              <div ref={navRef} className="bg-neutral-950 pt-14 pb-16">
+                <Header
+                  invert
+                  panelId={panelId}
+                  icon={XIcon}
+                  toggleRef={closeRef}
+                  expanded={expanded}
+                  onToggle={() => {
+                    setExpanded((expanded) => !expanded)
+                    window.setTimeout(() =>
+                      openRef.current?.focus({ preventScroll: true }),
+                    )
+                  }}
+                />
+              </div>
+              <Navigation />
+              <div className="relative bg-neutral-950 before:absolute before:inset-x-0 before:top-0 before:h-px before:bg-neutral-800">
+                <Container>
                   <div
                     className={clsx(
-                      'sm:border-transparent',
-                      i18n.language === 'ar'
-                        ? 'sm:border-r sm:pr-16'
-                        : 'sm:border-l sm:pl-16',
+                      'grid grid-cols-1 gap-y-10 pt-10 pb-16 sm:pt-16',
+                      isRTL
+                        ? 'sm:grid-flow-dense sm:grid-cols-2'
+                        : 'sm:grid-cols-2',
                     )}
                   >
-                    <h2 className="font-display text-base font-semibold text-white">
-                      {t('footer.followUs')}
-                    </h2>
-                    <SocialMedia className="mt-6" invert />
+                    <div>
+                      <h2 className="font-display text-base font-semibold text-white">
+                        {t('footer.offices')}
+                      </h2>
+                      <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
+                        <div>
+                          <h3 className="font-display text-sm font-medium text-white">
+                            {t('footer.middleEast')}
+                          </h3>
+                          <p className="mt-2 text-sm text-neutral-300">
+                            {t('footer.middleEastRegions')}
+                          </p>
+                        </div>
+                        <div>
+                          <h3 className="font-display text-sm font-medium text-white">
+                            {t('footer.europe')}
+                          </h3>
+                          <p className="mt-2 text-sm text-neutral-300">
+                            {t('footer.europeRegions')}
+                          </p>
+                        </div>
+                        <div>
+                          <h3 className="font-display text-sm font-medium text-white">
+                            {t('footer.worldwide')}
+                          </h3>
+                          <p className="mt-2 text-sm text-neutral-300">
+                            {t('footer.worldwideRegions')}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className={clsx(
+                        'sm:border-transparent',
+                        i18n.language === 'ar'
+                          ? 'sm:border-r sm:pr-16'
+                          : 'sm:border-l sm:pl-16',
+                      )}
+                    >
+                      <h2 className="font-display text-base font-semibold text-white">
+                        {t('footer.followUs')}
+                      </h2>
+                      <SocialMedia className="mt-6" invert />
+                    </div>
                   </div>
-                </div>
-              </Container>
-            </div>
+                </Container>
+              </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
-      </header>
+        </header>
 
-      <motion.div
-        layout
-        style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
-        className="relative flex flex-auto overflow-hidden bg-white pt-14"
-      >
         <motion.div
           layout
-          className="relative isolate flex w-full flex-col pt-9"
+          style={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
+          className="relative flex flex-auto overflow-hidden bg-white pt-14"
         >
-          <GridPattern
-            className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)] fill-neutral-50 stroke-neutral-950/5"
-            yOffset={-96}
-            interactive
-          />
+          <motion.div
+            layout
+            className="relative isolate flex w-full flex-col pt-9"
+          >
+            <GridPattern
+              className="absolute inset-x-0 -top-14 -z-10 h-[1000px] w-full [mask-image:linear-gradient(to_bottom_left,white_40%,transparent_50%)] fill-neutral-50 stroke-neutral-950/5"
+              yOffset={-96}
+              interactive
+            />
 
-          <main className="w-full flex-auto">{children}</main>
+            <main className="w-full flex-auto">{children}</main>
 
-          <Footer />
+            <Footer />
+          </motion.div>
         </motion.div>
-      </motion.div>
-    </MotionConfig>
+      </MotionConfig>
+    </>
   )
 }
 
